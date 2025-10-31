@@ -55,7 +55,7 @@ export const Hero = () => {
           </motion.p>
 
           <motion.h1
-            className="text-6xl md:text-8xl font-bold text-white mb-6 text-balance"
+            className="text-6xl md:text-8xl font-bold text-foreground mb-6 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -64,7 +64,7 @@ export const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="text-xl md:text-2xl text-white/80 mb-12 max-w-3xl mx-auto text-balance"
+            className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
@@ -90,7 +90,6 @@ export const Hero = () => {
             <Button
               size="lg"
               variant="outline"
-              className="bg-white/10 border-white/20 text-white hover:bg-white/20 backdrop-blur-sm"
               onClick={() => scrollToSection("contact")}
             >
               Get In Touch
@@ -107,7 +106,7 @@ export const Hero = () => {
               href="https://www.linkedin.com/in/sampadapavate"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-accent transition-colors"
             >
               <Linkedin className="h-6 w-6" />
             </a>
@@ -115,13 +114,13 @@ export const Hero = () => {
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-accent transition-colors"
             >
               <Github className="h-6 w-6" />
             </a>
             <a
               href="mailto:sampadapawate@gmail.com"
-              className="text-white/60 hover:text-white transition-colors"
+              className="text-muted-foreground hover:text-accent transition-colors"
             >
               <Mail className="h-6 w-6" />
             </a>
@@ -138,9 +137,9 @@ export const Hero = () => {
             y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
           }}
         >
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center pt-2">
+          <div className="w-6 h-10 border-2 border-border rounded-full flex justify-center pt-2">
             <motion.div
-              className="w-1.5 h-1.5 bg-white/60 rounded-full"
+              className="w-1.5 h-1.5 bg-muted-foreground rounded-full"
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
             />

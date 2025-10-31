@@ -36,7 +36,7 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-32 gradient-hero relative overflow-hidden" ref={ref}>
+    <section id="contact" className="py-32 bg-secondary relative overflow-hidden" ref={ref}>
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -61,10 +61,10 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
         >
           <p className="text-accent font-medium mb-4 tracking-wide">GET IN TOUCH</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 text-balance">
+          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-balance">
             Let's Build Something Amazing
           </h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto mb-16">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-16">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
           </p>
         </motion.div>
@@ -78,7 +78,7 @@ export const Contact = () => {
           {contactInfo.map((info, index) => (
             <motion.div
               key={info.label}
-              className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-xl hover:bg-white/10 transition-all duration-300"
+              className="bg-card backdrop-blur-sm border border-border p-6 rounded-xl hover:shadow-md transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 * index }}
@@ -91,25 +91,25 @@ export const Contact = () => {
                   rel={info.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="flex items-start gap-4 group"
                 >
-                  <div className="p-3 bg-accent/20 rounded-lg group-hover:bg-accent/30 transition-colors">
+                  <div className="p-3 bg-accent/10 rounded-lg group-hover:bg-accent/20 transition-colors">
                     <info.icon className="h-6 w-6 text-accent" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/60 text-sm mb-1">{info.label}</p>
-                    <p className="text-white font-medium group-hover:text-accent transition-colors">
+                    <p className="text-muted-foreground text-sm mb-1">{info.label}</p>
+                    <p className="text-foreground font-medium group-hover:text-accent transition-colors">
                       {info.value}
                     </p>
                   </div>
-                  <ArrowRight className="h-5 w-5 text-white/40 group-hover:text-accent group-hover:translate-x-1 transition-all" />
+                  <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-accent group-hover:translate-x-1 transition-all" />
                 </a>
               ) : (
                 <div className="flex items-start gap-4">
-                  <div className="p-3 bg-accent/20 rounded-lg">
+                  <div className="p-3 bg-accent/10 rounded-lg">
                     <info.icon className="h-6 w-6 text-accent" />
                   </div>
                   <div className="flex-1">
-                    <p className="text-white/60 text-sm mb-1">{info.label}</p>
-                    <p className="text-white font-medium">{info.value}</p>
+                    <p className="text-muted-foreground text-sm mb-1">{info.label}</p>
+                    <p className="text-foreground font-medium">{info.value}</p>
                   </div>
                 </div>
               )}
