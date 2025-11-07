@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, FileText } from "lucide-react";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -45,22 +45,13 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <motion.p
-            className="text-accent font-medium mb-4 tracking-wide"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-          >
-            FULL STACK DEVELOPER & ML ENGINEER
-          </motion.p>
-
           <motion.h1
             className="text-6xl md:text-8xl font-bold text-foreground mb-6 text-balance"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
           >
-            Sampada Pavate
+            Hi, I'm Sampada Pavate
           </motion.h1>
 
           <motion.p
@@ -69,7 +60,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            Building elegant, scalable solutions at the intersection of web development and artificial intelligence.
+            A passionate Software Engineer and AI Researcher with hands-on experience in Full-Stack Development, Machine Learning, and Cloud Technologies.
           </motion.p>
 
           <motion.div
@@ -80,18 +71,15 @@ export const Hero = () => {
           >
             <Button
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-white shadow-glow group"
+              variant="outline"
+              className="group"
               onClick={() => scrollToSection("projects")}
             >
               View My Work
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
 
-            <Button
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection("contact")}
-            >
+            <Button size="lg" variant="outline" onClick={() => scrollToSection("contact")}>
               Get In Touch
             </Button>
           </motion.div>
@@ -119,10 +107,12 @@ export const Hero = () => {
               <Github className="h-6 w-6" />
             </a>
             <a
-              href="mailto:sampadapawate@gmail.com"
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-accent transition-colors"
             >
-              <Mail className="h-6 w-6" />
+              <FileText className="h-6 w-6" />
             </a>
           </motion.div>
         </motion.div>

@@ -10,16 +10,48 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "Lei Lab Research Website",
+      description: "Developed and modernized the Lei Lab website for UTA's Software Engineering Research Center using Next.js, TypeScript, and TailwindCSS. Migrated legacy Jekyll pages, automated YAML-to-JSON data handling, and improved site performance and accessibility.",
+      tags: ["Next.js", "TypeScript", "TailwindCSS", "Jekyll Migration"],
+      gradient: "from-blue-500 to-cyan-500",
+      websiteLink: "https://jeff-lei-lab-website.vercel.app/",
+      githubLink: "https://github.com/sercatuta-lei/sercatuta-lei.github.io",
+    },
+    {
+      title: "Document Filler",
+      description: "Built an AI-powered document autofill tool for Lexsy, leveraging Google Gemini API for user input interpretation and dynamic question generation. Enhanced efficiency by automating repetitive legal form entries and improving user experience.",
+      tags: ["AI", "Google Gemini API", "Document Automation", "Legal Tech"],
+      gradient: "from-purple-500 to-pink-500",
+      websiteLink: "https://lexsy-document-filler.vercel.app/",
+      githubLink: "https://github.com/SampadaPawate/Lexsy_Document_Filler",
+    },
+    {
+      title: "Gangavathi Exports – E-Commerce Platform",
+      description: "Developed a Magento-based e-commerce website for a family-owned clothing business, automating setup and deployment with Ansible on Ubuntu. Integrated a mobile-friendly theme, secure payment gateway, and configurable product listings to enhance user experience and streamline online sales.",
+      tags: ["Magento", "Ansible", "Ubuntu", "E-commerce", "Payment Gateway", "DevOps"],
+      gradient: "from-amber-500 to-orange-500",
+      websiteLink: "https://gangavathiexports.com/",
+    },
+    {
+      title: "Voicelytics – AI Interview Assistant",
+      description: "Created an AI-driven voice interview platform built with Next.js, Node.js, and Vapi API that conducts mock interviews, analyzes user responses, and provides real-time feedback. Designed to help users improve communication, confidence, and clarity in interviews.",
+      tags: ["Next.js", "Node.js", "Vapi API", "AI", "Voice Recognition", "Interview Prep"],
+      gradient: "from-teal-500 to-emerald-500",
+      githubLink: "https://github.com/SampadaPawate/Voicelytics",
+    },
+    {
       title: "Learnify",
       description: "Comprehensive learning management platform with content delivery, progress tracking, and e-commerce capabilities. Increased user engagement by 30% and session duration by 25%.",
       tags: ["Next.js", "Clerk", "Prisma", "Stripe", "Cypress", "TailwindCSS"],
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-green-500 to-teal-500",
+      githubLink: "https://github.com/SampadaPawate/Learnify",
     },
     {
       title: "Maverick Market",
       description: "Real-time Android e-commerce application featuring wishlist management, dynamic pricing, and image optimization. Improved app responsiveness by 50% through optimized database queries.",
       tags: ["React Native", "Firebase", "Real-time DB", "E-commerce"],
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-indigo-500 to-purple-500",
+      githubLink: "https://github.com/SampadaPawate/MavMarket",
     },
     {
       title: "COVID-19 Detection System",
@@ -77,22 +109,32 @@ export const Projects = () => {
                 </div>
 
                 <div className="flex gap-4">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group/btn border-accent/30 hover:bg-accent/10"
-                  >
-                    <Github className="h-4 w-4 mr-2" />
-                    View Code
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="group/btn border-accent/30 hover:bg-accent/10"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
-                    Live Demo
-                  </Button>
+                  {project.githubLink && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="group/btn border-accent/30 hover:bg-accent/10"
+                      asChild
+                    >
+                      <a href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4 mr-2" />
+                        View Code
+                      </a>
+                    </Button>
+                  )}
+                  {project.websiteLink && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="group/btn border-accent/30 hover:bg-accent/10"
+                      asChild
+                    >
+                      <a href={project.websiteLink} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-2 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </div>
             </motion.div>

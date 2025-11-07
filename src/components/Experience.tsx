@@ -20,6 +20,28 @@ export const Experience = () => {
       ],
     },
     {
+      title: "Resident Assistant",
+      company: "Centennial Court Apartments, UTA",
+      period: "Aug 2024 – May 2025",
+      achievements: [
+        "Hosted community-building events to enhance student engagement and promote campus involvement",
+        "Supported residents with academic, personal, and housing-related concerns to ensure a positive living experience",
+        "Maintained a safe and inclusive residential environment through effective communication and policy enforcement",
+        "Collaborated with housing staff to coordinate events, manage documentation, and handle emergency situations responsibly",
+      ],
+    },
+    {
+      title: "Resident Assistant",
+      company: "Upward Bound Math & Science (UBMS) Summer Program, UTA",
+      period: "Jun 2024 – Jul 2024",
+      achievements: [
+        "Supervised high school students during a six-week residential academic program",
+        "Facilitated educational and recreational activities to foster leadership, teamwork, and personal growth",
+        "Monitored student well-being and enforced program policies to ensure safety and discipline",
+        "Coordinated with faculty and staff to organize workshops, mentoring sessions, and evening events",
+      ],
+    },
+    {
       title: "Full Stack Developer",
       company: "Gangavathiexports",
       period: "Jan 2024 - June 2024",
